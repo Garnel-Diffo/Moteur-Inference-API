@@ -1,0 +1,13 @@
+% Faits médicaux
+symptome(fievre).
+symptome(toux).
+symptome(maux_de_tete).
+symptome(douleurs_musculaires).
+
+% Associations maladies-symptômes
+maladie(grippe) :- symptome(fievre), symptome(toux), symptome(maux_de_tete).
+maladie(covid) :- symptome(fievre), symptome(toux), symptome(douleurs_musculaires).
+maladie(rhume) :- symptome(toux).
+
+% Règle pour diagnostic
+diagnostic(Maladie) :- maladie(Maladie).
