@@ -1,0 +1,35 @@
+package com.systemformel.moteurinferenceapi;
+
+import com.systemformel.moteurinferenceapi.service.InferenceService;
+
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        InferenceService service = new InferenceService();
+
+        // Exemple de symptômes existants
+        Map<String, String> result1 = service.getDiagnosis("fever", "cough");
+        System.out.println("Result with existing symptoms: " + result1);
+
+        // Exemple de symptômes inexistants
+        Map<String, String> result2 = service.getDiagnosis("unknown_symptom1", "unknown_symptom2");
+        System.out.println("Result with non-existing symptoms: " + result2);
+
+        // Exemple avec une combinaison de symptômes existants et inexistants
+        Map<String, String> result3 = service.getDiagnosis("fever", "unknown_symptom");
+        System.out.println("Result with a mix of existing and non-existing symptoms: " + result3);
+
+        // Test avec aucun symptôme
+        try {
+            Map<String, String> result4 = service.getDiagnosis();
+            System.out.println("Result with no symptoms: " + result4);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Caught expected exception for no symptoms: " + e.getMessage());
+        }
+
+        // Test avec un seul symptôme
+        Map<String, String> result5 = service.getDiagnosis("fever");
+        System.out.println("Result with one symptom: " + result5);
+    }
+}
