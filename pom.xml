@@ -60,13 +60,18 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<!-- https://mavenlibs.com/maven/dependency/jpl/jpl -->
 		<dependency>
-			<groupId>net.sf.jpl</groupId>
+			<groupId>jpl</groupId>
 			<artifactId>jpl</artifactId>
-			<version>7.6.1</version>
+			<version>7.4.0</version>
 		</dependency>
-
+		<!-- <dependency>
+			<groupId>org.jpl7</groupId>
+			<artifactId>jpl</artifactId>
+			<version>1.0</version>
+			<scope>compile</scope>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>

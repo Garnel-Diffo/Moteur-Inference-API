@@ -10,9 +10,15 @@ import java.util.Map;
 @RequestMapping("/api/inference")
 public class InferenceController {
 
-    @Autowired
     private InferenceService inferenceService;
 
+    public InferenceController(InferenceService inferenceService) {
+        this.inferenceService = inferenceService;
+    }
+
     @PostMapping("/diagnose")
-    // public Map<String, String> diagnose(@RequestBody Map<String, String[]> symptomsRequest) {}
+    public Map<String, String> diagnose(@RequestBody Map<String, String[]> symptomsRequest) {
+        String[] symptoms = symptomsRequest.get("symptoms");
+        return inferenceService.getDiagnosis(symptoms);
+    }
 }
