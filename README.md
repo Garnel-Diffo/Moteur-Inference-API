@@ -6,10 +6,53 @@ Concevoir et implémenter le moteur d’inférence en Prolog et développer les 
 
 ## Pour Tester l’API
 
-### Démarrez le serveur Spring Boot :
-mvn spring-boot:run
+### Après avoir cloner le projet avec la commande:
+```bash
+git clone https://github.com/Garnel-Diffo/Moteur-Inference-API.git
+```
 
-### Utilisez Postman ou cURL ou le swagger pour tester l'API :
+### Il faut installer SWI-Prolog qui est à la racine du projet le nom est `swipl-9.0.4-1.x64` 
+
+### Definir la variable d'environnement `jpl`. 
+taper la commande suivate dans le CMD:
+```bash
+set JAVA_LIBRARY_PATH=C:\Program Files\swipl\bin
+```
+
+### Installer les dependances 
+Placez-vous à la racine du projet puis tapez:
+```bash
+mvn clean install
+```
+
+### Démarrez le serveur Spring Boot 
+Placez-vous à la racine du projet puis tapez:
+```bash
+mvn spring-boot:run
+```
+
+### Utilisez le swagger configuré dans le projet ou Postman pour tester l'API :
+Pour utiliser le **`swagger`** pour tester, utilisez l'URL suivant
+
+`[http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)`
+
+**Endpoint :** **`POST`** /api/inference/diagnose
+
+**Corps de la requête (JSON) :**
+```json
+{
+  "symptoms": ["fievre", "toux", "maux_de_tete"]
+}
+```
+
+**Réponse attendue (par exemple) :**
+```json
+{
+  "diagnosis": "grippe"
+}
+```
+
+Pour utiliser `Postman` voici les différentes informations
 
 **Endpoint :** `http://localhost:8080/api/inference/diagnose`
 **Méthode :** POST
@@ -17,7 +60,7 @@ mvn spring-boot:run
 **Corps de la requête (JSON) :**
 ```json
 {
-  "symptoms": ["fievre", "toux_seche"]
+  "symptoms": ["fievre", "toux", "maux_de_tete"]
 }
 ```
 

@@ -14,7 +14,7 @@ symptomes_maladie(colopathie_fonctionnelle, [douleur, crampe_abdominale, ballonn
 
 % Maladies 10-20
 symptomes_maladie(rhume_commun, [rhume, toux, nez_bouche, maux_de_gorge, fievre]).
-symptomes_maladie(grippe, [fievre, toux, douleurs_musculaires, fatigue, maux_de_tete]).
+symptomes_maladie(grippe, [fievre, toux, maux_de_tete]).
 symptomes_maladie(angine, [maux_de_gorge, fievre, douleurs_musculaires]).
 symptomes_maladie(bronchite_aigue, [toux, douleurs_musculaires, fatigue, essoufflement]).
 symptomes_maladie(otite_moyenne, [douleur_auriculaire, otorrhee, sensation_de_poids_dans_l_oreille, fievre]).
