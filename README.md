@@ -31,8 +31,8 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### Utilisez le swagger configuré dans le projet ou Postman pour tester l'API :
-Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant dans votre navigateur
+### Utilisez le **`swagger`** configuré dans le projet ou **`Postman`** pour tester l'API :
+Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivante dans votre navigateur
 
 ```http://localhost:8080/swagger-ui/index.html#/```
 
@@ -58,7 +58,7 @@ Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant
 
 **Endpoint :** **`GET`** /api/inference/symptoms
 
-**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton "Execute"**
+**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton `Execute`**
 
 **Réponse attendue (par exemple) :**
 ```json
@@ -100,10 +100,10 @@ Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant
 **Endpoint :** `http://localhost:8080/api/inference/symptoms`
 **Méthode :** GET
 
-**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton "Execute"**
+**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton `SEND`**
 
 **Réponse attendue (par exemple) :**
-```json
+```json 
 {
   "symptoms": [
     "maux_de_tete",
