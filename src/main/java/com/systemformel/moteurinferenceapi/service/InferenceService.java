@@ -106,4 +106,38 @@ public class InferenceService {
         // Retourner le résultat
         return diagnosisMap;
     }
+
+
+    // Méthode pour obtenir les symptômes
+    public Map<String, Object> getSymptoms() {
+        // Charger le fichier Prolog avant d'exécuter la requête
+        try {
+            loadPrologFile();
+        } catch (IOException e) {
+            throw new RuntimeException("Erreur lors du chargement du fichier Prolog : " + e.getMessage());
+        }
+
+        Map<String, Object> symptomsMap = new HashMap<>();
+        List<String> symptomsList = new ArrayList<>();
+
+        try {
+            Query query = new Query("symptome(Symptomes).");
+
+            while (query.hasMoreSolutions()) {
+                Map<String, Term> solution = query.nextSolution();
+                Term symptomTerm = solution.get("Symptomes");
+                if (symptomTerm != null) {
+                    symptomsList.add(symptomTerm.toString());
+                }
+            }
+
+            symptomsMap.put("symptoms", symptomsList);
+
+        } catch (Exception e) {
+            symptomsMap.put("error", e.getMessage());
+        }
+
+        // Retourner le résultat
+        return symptomsMap;
+    }
 }

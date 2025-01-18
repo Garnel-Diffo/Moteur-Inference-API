@@ -23,4 +23,10 @@ public class InferenceController {
         System.out.println("Symptômes values : "+ symptoms);
         return inferenceService.getDiagnosis(symptoms);
     }
+
+    @GetMapping("/symptoms")
+    public Map<String, Object> getSymptoms() {
+        return inferenceService.getSymptoms();
+    }
+    
 }

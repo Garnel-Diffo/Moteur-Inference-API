@@ -36,6 +36,8 @@ Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant
 
 ```http://localhost:8080/swagger-ui/index.html#/```
 
+### Voici comment tester le diagnostique
+
 **Endpoint :** **`POST`** /api/inference/diagnose
 
 **Corps de la requête (JSON) :**
@@ -52,7 +54,29 @@ Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant
 }
 ```
 
+### Voici comment recupérer tous les symptômes de la base de connaissance
+
+**Endpoint :** **`GET`** /api/inference/symptoms
+
+**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton "Execute"**
+
+**Réponse attendue (par exemple) :**
+```json
+{
+  "symptoms": [
+    "maux_de_tete",
+    "vertiges",
+    "palpitations_cardiaques",
+    "toux",
+    "fatigue",
+    "fievre",
+  ]
+}
+```
+
 ### Pour utiliser `Postman` voici les différentes informations
+
+### Voici comment tester le diagnostique avec Postman
 
 **Endpoint :** `http://localhost:8080/api/inference/diagnose`
 **Méthode :** POST
@@ -67,6 +91,27 @@ Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant
 **Réponse attendue (par exemple) :**
 ```json
 {
-  "diagnosis": "grippe"
+  "diagnosis": ["grippe"]
+}
+```
+
+### Voici comment recupérer tous les symptômes de la base de connaissance avec Postman
+
+**Endpoint :** `http://localhost:8080/api/inference/symptoms`
+**Méthode :** GET
+
+**Ici il n'y a pas de corps pour la requête, on clique juste sur le bouton "Execute"**
+
+**Réponse attendue (par exemple) :**
+```json
+{
+  "symptoms": [
+    "maux_de_tete",
+    "vertiges",
+    "palpitations_cardiaques",
+    "toux",
+    "fatigue",
+    "fievre",
+  ]
 }
 ```
