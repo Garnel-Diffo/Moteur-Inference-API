@@ -26,7 +26,7 @@ mvn clean install
 ```
 
 ### Démarrez le serveur Spring Boot 
-Placez-vous à la racine du projet puis tapez:
+### Placez-vous à la racine du projet puis tapez:
 ```bash
 mvn spring-boot:run
 ```
@@ -34,7 +34,7 @@ mvn spring-boot:run
 ### Utilisez le swagger configuré dans le projet ou Postman pour tester l'API :
 Pour utiliser le **`swagger`** pour tester, utilisez l'URL suivant
 
-`[http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)`
+```http://localhost:8080/swagger-ui/index.html#/```
 
 **Endpoint :** **`POST`** /api/inference/diagnose
 
@@ -52,7 +52,7 @@ Pour utiliser le **`swagger`** pour tester, utilisez l'URL suivant
 }
 ```
 
-Pour utiliser `Postman` voici les différentes informations
+### Pour utiliser `Postman` voici les différentes informations
 
 **Endpoint :** `http://localhost:8080/api/inference/diagnose`
 **Méthode :** POST
