@@ -32,7 +32,7 @@ mvn spring-boot:run
 ```
 
 ### Utilisez le swagger configuré dans le projet ou Postman pour tester l'API :
-Pour utiliser le **`swagger`** pour tester, utilisez l'URL suivant
+Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivant dans votre navigateur
 
 ```http://localhost:8080/swagger-ui/index.html#/```
 
